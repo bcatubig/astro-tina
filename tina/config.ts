@@ -1,4 +1,5 @@
 import { defineConfig } from "tinacms";
+import type { Collection } from "tinacms";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -21,7 +22,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "upload",
       publicFolder: "public",
     },
   },
@@ -31,7 +32,7 @@ export default defineConfig({
       {
         name: "post",
         label: "Posts",
-        path: "content/posts",
+        path: "src/content/posts",
         fields: [
           {
             type: "string",
